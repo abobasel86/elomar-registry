@@ -83,6 +83,10 @@ yanked = true
 Check your change locally with `python scripts/validate.py --base origin/main`
 (Python 3.11+ and git).
 
+## License
+
+The index and scripts are licensed under either of [Apache-2.0](LICENSE-APACHE) or [MIT](LICENSE-MIT), at your option. Each package has its own license, set by its author.
+
 ---
 
 ## بالعربية
