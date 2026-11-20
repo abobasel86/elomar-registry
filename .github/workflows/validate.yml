@@ -1,0 +1,32 @@
+# Checks every change to the index (see scripts/validate.py).
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check entries against the base branch
+        if: github.event_name == 'pull_request'
+        run: python scripts/validate.py --base origin/${{ github.base_ref }}
+      - name: Check entries against the previous commit
+        if: github.event_name == 'push'
+        run: |
+          if git rev-parse --verify --quiet HEAD^ >/dev/null; then
+            python scripts/validate.py --base HEAD^
+          else
+            python scripts/validate.py
+          fi
