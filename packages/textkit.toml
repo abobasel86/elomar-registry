@@ -1,0 +1,6 @@
+description = "Everyday helpers for text: slugs, title case, camelCase and snake_case, truncating and word wrapping."
+git = "https://github.com/abobasel86/elomar-textkit"
+
+[[versions]]
+version = "0.1.0"
+commit = "c394414703c47b36e359474c209d91d3394d0c40"

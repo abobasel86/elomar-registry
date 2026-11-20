@@ -1,0 +1,6 @@
+description = "Read and write CSV (RFC 4180): quoted fields, quotes and line breaks inside fields, other separators, and rows as maps."
+git = "https://github.com/abobasel86/elomar-csvkit"
+
+[[versions]]
+version = "0.1.0"
+commit = "40624289fa3296e2fb5ef4207c6fb2dc7b57d2e4"

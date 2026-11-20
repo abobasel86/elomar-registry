@@ -1,0 +1,6 @@
+description = "Checks for user input such as web forms: e-mail, URL, phone, dates, passwords, lengths and ranges, and a simple way to collect error messages."
+git = "https://github.com/abobasel86/elomar-validator"
+
+[[versions]]
+version = "0.1.0"
+commit = "a51a8e84ee6a47c3aaca956455c8eec63e90a7e2"
